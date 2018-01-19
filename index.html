@@ -5,41 +5,44 @@
     <title>title</title>
   <style type="text/css">
      div{
-         width:400px;
-         height:400px;
+         width:250px;
+         height:250px;
             animation-name:rotate-name;
             animation-duration:15s;
             animation-iteration-count: infinite;
+            animation-timing-function:ease-in-out;
          text-align:center;
          top:50%;
          position:relative;
          box-shadow: 10px 10px lightgray;
-         
-        }
+            transition: width 3s;
+            transition:height 3s;
+         }
      p{
-         /* this chunk of code blow woll center the text*/
+         /* this chunk of code will center the text*/
         margin: 0;
         position: absolute;
         top: 50%;
         left: 50%;
          margin-right: -50%;
         transform: translate(-50%, -50%) ;
+        text-shadow: 2px 2px lightgray; /*This adds the gray shadow on the words*/
        
         
      }
      div:hover{
-       transform:translate(50px,100px); /*moves the box 50 pixles right and 100 down*/
        transform:rotateY(180deg);  /* reflects the font when you hover */
-       
+       width: 400px;
+       height:400px;
          
      }
      
      @keyframes rotate-name{
          /*this allows for the background colors to change*/
-          0% {background:#F6BED6;}
-          25%{background:#E3BEF6;}
-          50% {background:#BEF6F5;}
-          100%{background:#F4F6BE;}
+          0% {background: radial-gradient(#F6BED6,white);}
+          25%{background: radial-gradient(#E3BEF6,white);}
+          50% {background: radial-gradient(#BEF6F5,white);}
+          100%{background: radial-gradient(#F4F6BE,white);}
           110%{background:#F6BED6;}
           
      }
