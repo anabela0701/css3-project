@@ -5,16 +5,21 @@
     <title>title</title>
   <style type="text/css">
      div{
-         width:250px;
+         width:250px;/*size of box*/
          height:250px;
+         border-radius:25px;
+        /*the animantion is being applied here and it is 15s long*/
+        
             animation-name:rotate-name;
             animation-duration:15s;
             animation-iteration-count: infinite;
             animation-timing-function:ease-in-out;
+        /*this will allow for the text to be centered*/
          text-align:center;
          top:50%;
          position:relative;
          box-shadow: 10px 10px lightgray;
+         /*this sets up the transition when you hover over it, it will expand*/
             transition: width 3s;
             transition:height 3s;
          }
@@ -29,9 +34,10 @@
         text-shadow: 2px 2px lightgray; /*This adds the gray shadow on the words*/
        
         
-     }
+     }/*this function will allow for when the user mouse to trigger the following*/
      div:hover{
        transform:rotateY(180deg);  /* reflects the font when you hover */
+      /*This allows for the box/Div to expand to 400px in width and height when you hover*/
        width: 400px;
        height:400px;
          
